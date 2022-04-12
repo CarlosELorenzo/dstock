@@ -4,6 +4,7 @@ import Intro from '../components/Intro/Intro';
 import ImageContainer from '../components/ImageContainer/ImageContainer';
 import styled from 'styled-components';
 import useImage from './../lib/hooks/useImage/useImage';
+import Columns from '../lib/layout/Columns';
 
 const defaultEndpoint = 'https://picsum.photos/v2/list?page=0&limit=100';
 
@@ -27,10 +28,12 @@ const ImagesColumns = styled.div`
 `;
 const Home = ({ data }) => {
 	const images = useImage(data);
-	console.log(data[0]);
+	
+	
 
 	return (
 		<>
+			<Columns />
 			<ImagesColumns>
 				<ImageContainer data={data} />
 			</ImagesColumns>

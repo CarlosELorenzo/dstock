@@ -85,13 +85,15 @@ const StyledIcons = styled.div`
 	}
 `;
 
-const ImageCard = ({ imgId }) => {
+const ImageCard = ({ author, src }) => {
 	//const image = useImage(imgId);
-	const image = useImage(imgId);
+	
+	//const image = useImage(imgId);
 	//const { src } = image;
 	//console.log(image1.src);
 
-	const getImageSrc = (imageId) => {
+	
+	/*const getImageSrc = (imageId) => {
 		switch (imageId) {
 			case 0:
 				return image1.src;
@@ -126,14 +128,15 @@ const ImageCard = ({ imgId }) => {
 	const imgSrc = getImageSrc(imgId);
 	useEffect(() => {
 		//console.log(getImageSrc(imgId));
-	}, []);
+	}, []);*/
+	//console.log("Url: ",{src,author})
 	return (
 		<Container>
-			<Image src={imgSrc} />
+			<Image src={src} />
 			<ImageData>
 				<StyledAuthor>
 					<div></div>
-					<p>John Doe</p>
+					<p>{author}</p>
 				</StyledAuthor>
 				<StyledIcons>
 					<AiOutlineDownload />
